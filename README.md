@@ -1,7 +1,6 @@
-# OpsManager Vim Config
+# My Personal Vim Config
 
-Cloned from Neo, You should give theirs a try.
-
+Cloned from OpsManager, You should give theirs a try.
 
 ## Pre-requisites
 
