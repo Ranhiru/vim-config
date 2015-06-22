@@ -90,6 +90,19 @@ Common practice is to symlink a folder containing your custom configuration file
 * `gr` - jump to routes file
 * `gm` - jump to Gemfile
 
+#### Paste as Coffee
+
+* `<leader>pc` - Convert JS in the clipboard to Coffee and paste
+
+#### Prettify JS
+
+* `<leader>fj` - Formats and prettifies JS in the currently open file
+
+#### Vim Easy Motion Commands
+
+* `CMD + j` - Enable easy motion starting after the current cursor position
+* `CMD + k` - Enable easy motion starting before the current cursor position
+
 #### Macros (from within insert mode type abbreviation followed by punctuation or space)
 
 * `Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum` - insert some lorem ipsum text
@@ -426,6 +439,23 @@ There is a shortcut available for the function:
 
 ```code
 <leader>pc
+```
+
+## Prettify JS
+
+Run on a JS file to prettify it
+
+```code
+<leader>fj
+```
+
+## Vim Easy Motion Shortcuts
+
+Run easy motion commands using Cmd + j for jumping down and Cmd + k for jumping up from the current line
+
+```code
+<D-j>
+<D-k>
 ```
 
 ## Contributing
