@@ -63,9 +63,6 @@ map <Leader>ra :call RunAllSpecs()<CR>
 " Command mode: Ctrl-P
   cmap <Leader>p <C-R>=expand("%:p:h") . "/" <cr>
 
-" go to middle of line
-  map gm :call cursor(0, len(getline('.'))/2)<cr>
-
 " NERDTree Find
   nmap <leader>nf :NERDTreeFind<cr>
 
