@@ -71,3 +71,7 @@ map <Leader>ra :call RunAllSpecs()<CR>
 
 " Shortcut for PasteAsCoffee function
   map <leader>pc :PasteAsCoffee<cr>
+
+" Create shortcuts to use easy motion
+  map <D-j> <leader><leader>w
+  map <D-k> <leader><leader>b
