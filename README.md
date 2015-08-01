@@ -1,6 +1,6 @@
 # My Personal Vim Config
 
-Cloned from OpsManager, You should give theirs a try.
+Cloned from OpsManager.
 
 ## Pre-requisites
 
