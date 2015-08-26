@@ -30,6 +30,8 @@
   NeoBundle "git://github.com/AndrewRadev/splitjoin.vim"
   NeoBundle "git://github.com/wizztjh/vim-open-jasmine-rice.vim"
   NeoBundle "git://github.com/rpbaltazar/vim-lodash-highlight.git"
+  NeoBundle "xero/sourcerer.vim"
+  NeoBundle "jscappini/material.vim"
 
    " Vim airline configs
     NeoBundle 'git://github.com/bling/vim-airline.git'
