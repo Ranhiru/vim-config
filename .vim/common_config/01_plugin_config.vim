@@ -33,7 +33,7 @@
   NeoBundle "xero/sourcerer.vim"
   NeoBundle "jscappini/material.vim"
 
-   " Vim airline configs
+  " Vim airline configs
     NeoBundle 'git://github.com/bling/vim-airline.git'
     let g:airline_enabled = 1
     let g:airline_powerline_fonts = 1
@@ -273,6 +273,7 @@
     NeoBundle "tomtom/tlib_vim"
     NeoBundle 'gertjanreynaert/cobalt2-vim-theme'
     NeoBundle "git@github.com:garbas/vim-snipmate.git"
+    NeoBundle "diepm/vim-rest-console"
 
   " Easy formatting of JavaScript or JSON files
     NeoBundle "maksimr/vim-jsbeautify"
