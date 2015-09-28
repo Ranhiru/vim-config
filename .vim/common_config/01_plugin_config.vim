@@ -32,6 +32,12 @@
   NeoBundle "git://github.com/rpbaltazar/vim-lodash-highlight.git"
   NeoBundle "xero/sourcerer.vim"
   NeoBundle "jscappini/material.vim"
+  NeoBundle "gilgigilgil/anderson.vim"
+
+  " Vim plugin for live preview of markdown
+  NeoBundle "shime/vim-livedown.git"
+
+  NeoBundle 'junegunn/vim-easy-align'
 
   " Vim airline configs
     NeoBundle 'git://github.com/bling/vim-airline.git'
