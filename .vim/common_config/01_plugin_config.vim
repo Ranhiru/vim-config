@@ -254,7 +254,7 @@
   " Easy async RSpec running
     NeoBundle 'thoughtbot/vim-rspec'
     NeoBundle "git://github.com/tpope/vim-dispatch.git"
-    let g:rspec_runner = "os_x_iterm"
+    let g:rspec_runner = "os_x_iterm2"
     let g:rspec_command = "rspec --format=progress --no-profile {spec}"
     nmap <Leader>rc :wa<CR> :call RunCurrentSpecFile()<CR>
     nmap <Leader>rn :wa<CR> :call RunNearestSpec()<CR>
