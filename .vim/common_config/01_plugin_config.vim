@@ -33,6 +33,8 @@
   NeoBundle "xero/sourcerer.vim"
   NeoBundle "jscappini/material.vim"
   NeoBundle "gilgigilgil/anderson.vim"
+  NeoBundle "git://github.com/DrSpatula/vim-buddy.git"
+  NeoBundle "git://github.com/Lokaltog/vim-distinguished.git"
 
   " Vim plugin for live preview of markdown
   NeoBundle "shime/vim-livedown.git"
