@@ -138,7 +138,7 @@
       nmap gl :cwindow<CR>
 
   " Vim Multiple Cursors
-    NeoBundle 'git://github.com/terryma/vim-multiple-cursors.git'
+    NeoBundle 'terryma/vim-multiple-cursors.git'
 
   " Tagbar for navigation by tags using CTags
     NeoBundle "majutsushi/tagbar.git"
@@ -263,7 +263,7 @@
 
   " Easy async RSpec running
     NeoBundle 'thoughtbot/vim-rspec'
-    NeoBundle "git://github.com/tpope/vim-dispatch.git"
+    NeoBundle 'tpope/vim-dispatch'
     let g:rspec_runner = "os_x_iterm2"
     let g:rspec_command = "rspec --format=progress --no-profile {spec}"
     nmap <Leader>rc :wa<CR> :call RunCurrentSpecFile()<CR>
