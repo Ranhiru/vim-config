@@ -72,3 +72,6 @@ map <Leader>ra :call RunAllSpecs()<CR>
 " Create shortcuts to use easy motion
   map <D-j> <leader><leader>w
   map <D-k> <leader><leader>b
+
+" Git Blame
+  nnoremap <leader>gb :Gblame<cr>

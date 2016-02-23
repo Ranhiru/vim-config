@@ -193,7 +193,8 @@
       " Bubble multiple lines
       vmap <C-Up> [egv
       vmap <C-Down> ]egv
-
+      vmap <C-k> [egv
+      vmap <C-j> ]egv
 
   " Syntastic for catching syntax errors on save
     NeoBundle "scrooloose/syntastic.git"
