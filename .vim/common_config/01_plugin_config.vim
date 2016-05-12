@@ -288,6 +288,10 @@
     NeoBundle 'gertjanreynaert/cobalt2-vim-theme'
     NeoBundle "diepm/vim-rest-console"
 
+    NeoBundle 'Shougo/neocomplete'
+    NeoBundle 'Shougo/neosnippet'
+    NeoBundle 'Shougo/neosnippet-snippets'
+
   " Easy formatting of JavaScript or JSON files
     NeoBundle "maksimr/vim-jsbeautify"
     NeoBundle "einars/js-beautify"
