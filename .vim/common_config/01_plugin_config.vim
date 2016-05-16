@@ -278,10 +278,7 @@
     NeoBundle "Yggdroot/indentLine"
     NeoBundle "nathanaelkane/vim-indent-guides.git"
     NeoBundle "airblade/vim-gitgutter"
-    NeoBundle "MarcWeber/vim-addon-mw-utils"
-    NeoBundle "tomtom/tlib_vim"
     NeoBundle 'gertjanreynaert/cobalt2-vim-theme'
-    NeoBundle "garbas/vim-snipmate.git"
     NeoBundle "diepm/vim-rest-console"
 
   " Easy formatting of JavaScript or JSON files
