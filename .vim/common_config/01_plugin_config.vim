@@ -35,6 +35,10 @@
   NeoBundle "gilgigilgil/anderson.vim"
   NeoBundle "DrSpatula/vim-buddy.git"
   NeoBundle "Lokaltog/vim-distinguished.git"
+  
+  NeoBundle 'Shougo/neocomplete'
+  NeoBundle 'Shougo/neosnippet'
+  NeoBundle 'Shougo/neosnippet-snippets'
 
   " Vim plugin for live preview of markdown
   NeoBundle "shime/vim-livedown.git"
