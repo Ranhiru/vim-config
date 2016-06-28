@@ -225,6 +225,9 @@
       map <Leader>os :Rstylesheet<Space>
       map <Leader>oi :Rintegration<Space>
 
+      let g:rails_projections = {
+        \ "app/assets/javascripts/*.js.coffee": { "alternate": "spec/javascripts/%s_spec.js.coffee" },
+        \ "spec/javascripts/*_spec.js.coffee": { "alternate": "app/assets/javascripts/%s.js.coffee" } }
 
   " surround for adding surround 'physics'
     NeoBundle "tpope/vim-surround.git"
