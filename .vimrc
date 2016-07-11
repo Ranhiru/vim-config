@@ -15,3 +15,5 @@ autocmd FileType css,scss,coffee set iskeyword=@,48-57,_,-,?,!,192-255
 
 " autosave on focus lost
 :au FocusLost * silent! wa
+
+colorscheme Tomorrow-Night-Eighties
