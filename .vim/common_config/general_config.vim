@@ -146,3 +146,5 @@ autocmd BufNewFile,BufRead *.hamlc set filetype=haml
 let g:NERDTreeDirArrows=0
 
 autocmd FileType sass,scss,stylus syn cluster sassCssAttributes add=@cssColors
+
+au BufWritePre *.* call TrimEndLines()
