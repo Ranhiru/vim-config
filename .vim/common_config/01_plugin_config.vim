@@ -35,7 +35,7 @@
   NeoBundle "gilgigilgil/anderson.vim"
   NeoBundle "DrSpatula/vim-buddy.git"
   NeoBundle "Lokaltog/vim-distinguished.git"
-  
+
   NeoBundle 'Shougo/neocomplete'
   NeoBundle 'Shougo/neosnippet'
   NeoBundle 'Shougo/neosnippet-snippets'
@@ -131,15 +131,14 @@
     NeoBundle "kchmck/vim-coffee-script.git"
       au BufNewFile,BufRead *.coffee set filetype=coffee
 
-  " AG aka The Silver Searcher
-    NeoBundle 'rking/ag.vim.git'
-      nmap g/ :Ag!<space>
-      nmap g* :Ag! -w <C-R><C-W><space>
-      nmap ga :AgAdd!<space>
-      nmap gn :cnext<CR>
-      nmap gp :cprev<CR>
-      nmap gq :ccl<CR>
-      nmap gl :cwindow<CR>
+    NeoBundle 'mileszs/ack.vim'
+      let g:ackprg = 'ag --vimgrep --smart-case'
+      cnoreabbrev ag Ack!
+      cnoreabbrev aG Ack!
+      cnoreabbrev Ag Ack!
+      cnoreabbrev AG Ack!
+
+      nmap g* :Ack! <C-R><C-W><space>
 
   " Vim Multiple Cursors
     NeoBundle 'terryma/vim-multiple-cursors.git'
@@ -296,5 +295,9 @@
     NeoBundle "maksimr/vim-jsbeautify"
     NeoBundle "einars/js-beautify"
     nmap <Leader>fj :call JsBeautify()<cr>
+
+    NeoBundle "grepplace.vim"
+    set grepprg=ag
+    let g:grep_cmd_opts = '--line-numbers --noheading'
 
  call neobundle#end()
