@@ -132,7 +132,7 @@
       au BufNewFile,BufRead *.coffee set filetype=coffee
 
     NeoBundle 'mileszs/ack.vim'
-      let g:ackprg = 'ag --vimgrep --smart-case'
+      let g:ackprg = 'rg --vimgrep --smart-case'
       cnoreabbrev ag Ack!
       cnoreabbrev aG Ack!
       cnoreabbrev Ag Ack!
