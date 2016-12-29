@@ -13,7 +13,6 @@
 
 " Plugins requiring no additional configuration or keymaps
   NeoBundle "michaeljsmith/vim-indent-object.git"
-  NeoBundle "oscarh/vimerl.git"
   NeoBundle "pangloss/vim-javascript.git"
   NeoBundle "tomtom/tcomment_vim.git"
   NeoBundle "tpope/vim-endwise.git"
@@ -25,23 +24,8 @@
   NeoBundle "vim-scripts/L9.git"
   NeoBundle "vim-scripts/matchit.zip"
   NeoBundle "vim-scripts/ruby-matchit.git"
-  NeoBundle "tpope/vim-abolish.git"
   NeoBundle "skammer/vim-css-color"
-  NeoBundle "AndrewRadev/splitjoin.vim"
-  NeoBundle "wizztjh/vim-open-jasmine-rice.vim"
   NeoBundle "rpbaltazar/vim-lodash-highlight.git"
-  NeoBundle "xero/sourcerer.vim"
-  NeoBundle "jscappini/material.vim"
-  NeoBundle "gilgigilgil/anderson.vim"
-  NeoBundle "DrSpatula/vim-buddy.git"
-  NeoBundle "Lokaltog/vim-distinguished.git"
-
-  NeoBundle 'Shougo/neocomplete'
-  NeoBundle 'Shougo/neosnippet'
-  NeoBundle 'Shougo/neosnippet-snippets'
-
-  " Vim plugin for live preview of markdown
-  NeoBundle "shime/vim-livedown.git"
 
   NeoBundle 'junegunn/vim-easy-align'
 
@@ -88,14 +72,6 @@
   "Supertab code completion"
     NeoBundle "ervandew/supertab.git"
     let g:SuperTabContextDefaultCompletionType = "<c-n>"
-
-
-  " Dash Searching"
-    NeoBundle "rizzatti/funcoo.vim.git"
-    NeoBundle "rizzatti/dash.vim.git"
-      nmap <Leader>qs <Plug>DashSearch
-      nmap <Leader>qa <Plug>DashGlobalSearch
-
 
   " CtrlP
     NeoBundle "kien/ctrlp.vim.git"
@@ -183,10 +159,6 @@
       " shortcut to align text with Tabular
       map <Leader>a :Tabularize<space>
 
-  " ZoomWin to fullscreen a particular buffer without losing others
-    NeoBundle "vim-scripts/ZoomWin.git"
-      map <Leader>z :ZoomWin<CR>
-
   " Unimpaired for keymaps for quicky manipulating lines and files
     NeoBundle "tpope/vim-unimpaired.git"
       " Bubble single lines
@@ -207,12 +179,6 @@
       let g:syntastic_mode_map = { 'mode': 'active',
                                  \ 'active_filetypes': [],
                                  \ 'passive_filetypes': ['haml','scss','sass'] }
-
-
-  " gundo for awesome undo tree visualization
-    NeoBundle "sjl/gundo.vim.git"
-      map <Leader>h :GundoToggle<CR>
-
 
   " rails.vim, nuff' said
     NeoBundle "tpope/vim-rails.git"
@@ -237,37 +203,6 @@
       " = to surround with output erb tag
       let g:surround_61 = "<%= \r %>"
 
-
-  " Clojure Highlighting"
-    NeoBundle "tpope/vim-fireplace.git"
-    NeoBundle "tpope/vim-classpath.git"
-    NeoBundle "guns/vim-clojure-static.git"
-    NeoBundle "vim-scripts/paredit.vim"
-    NeoBundle "amdt/vim-niji.git"
-    autocmd BufNewFile,BufRead *.clj set filetype=clojure
-    autocmd BufNewFile,BufRead *.edn set filetype=clojure
-    autocmd BufNewFile,BufRead *.cljs set filetype=clojure
-    autocmd BufNewFile,BufRead *.cljx set filetype=clojure
-
-    let g:paredit_leader= '\'
-    let vimclojure#ParenRainbow  = 1
-
-  " Jade Highlighting"
-    NeoBundle "digitaltoad/vim-jade.git"
-    autocmd BufNewFile,BufRead *.jade set filetype=jade
-
-  " Scala Highlighting"
-    NeoBundle "derekwyatt/vim-scala.git"
-    autocmd BufNewFile,BufRead *.scala set filetype=scala
-
-  " Elixir plugin
-    NeoBundle "elixir-lang/vim-elixir.git"
-      au BufNewFile,BufRead *.ex set filetype=elixir
-      au BufNewFile,BufRead *.exs set filetype=elixir
-
-  " Rust!
-    NeoBundle 'wting/rust.vim.git'
-
   " Easy async RSpec running
     NeoBundle 'thoughtbot/vim-rspec'
     NeoBundle 'tpope/vim-dispatch'
@@ -278,14 +213,9 @@
     nmap <Leader>rl :wa<CR> :call RunLastSpec()<CR>
     nmap <Leader>ra :wa<CR> :call RunAllSpecs()<CR>
 
-  " Opsmanager hand picked plugins
-    NeoBundle "roman/golden-ratio"
-    NeoBundle 'mileszs/ack.vim'
     NeoBundle "Yggdroot/indentLine"
     NeoBundle "nathanaelkane/vim-indent-guides.git"
     NeoBundle "airblade/vim-gitgutter"
-    NeoBundle 'gertjanreynaert/cobalt2-vim-theme'
-    NeoBundle "diepm/vim-rest-console"
 
     NeoBundle 'Shougo/neocomplete'
     NeoBundle 'Shougo/neosnippet'
