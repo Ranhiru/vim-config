@@ -26,6 +26,7 @@
 
   " Vim airline configs
     call dein#add('bling/vim-airline')
+
     let g:airline_enabled = 1
     let g:airline_powerline_fonts = 1
     let g:airline_mode_map = {
@@ -62,6 +63,7 @@
     let g:airline_symbols.space = "\ua0"
 
   " Easy motion config
+
     call dein#add("Lokaltog/vim-easymotion")
 
   "Supertab code completion"

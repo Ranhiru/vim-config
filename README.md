@@ -1,7 +1,6 @@
-# OpsManager Vim Config
+# My Personal Vim Config
 
-Cloned from Neo, You should give theirs a try.
-
+Cloned from OpsManager.
 
 ## Pre-requisites
 
@@ -22,6 +21,7 @@ The Windows version of the Vim configuration uses rake (for installation) git (f
 ## Install
 
 Windows users: be sure to use **RailsInstaller** > **Command Prompt with Ruby and Rails** to perform these installation steps instead of the normal command prompt.
+
 
 1. `git clone git@github.com:opsmanger/vim-config.git`
 2. `cd vim-config`
@@ -92,6 +92,11 @@ Common practice is to symlink a folder containing your custom configuration file
 #### Paste as Coffee
 
 * `<leader>pc` - Convert JS in the clipboard to Coffee and paste
+
+
+#### Prettify JS
+
+* `<leader>fj` - Formats and prettifies JS in the currently open file
 
 #### Vim Easy Motion Commands
 
@@ -371,6 +376,23 @@ If you would like to use powerline fonts for vim and you use iTerm, make sure to
 
 ```code
 <leader>pc
+```
+
+## Prettify JS
+
+Run on a JS file to prettify it
+
+```code
+<leader>fj
+```
+
+## Vim Easy Motion Shortcuts
+
+Run easy motion commands using Cmd + j for jumping down and Cmd + k for jumping up from the current line
+
+```code
+<D-j>
+<D-k>
 ```
 
 ## Contributing
