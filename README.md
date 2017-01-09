@@ -22,20 +22,19 @@ The Windows version of the Vim configuration uses rake (for installation) git (f
 
 Windows users: be sure to use **RailsInstaller** > **Command Prompt with Ruby and Rails** to perform these installation steps instead of the normal command prompt.
 
-1. `git clone git@github.com:ranhiru/vim-config.git`
+
+1. `git clone git@github.com:opsmanger/vim-config.git`
 2. `cd vim-config`
 3. `rake` (This will symlink the necessary files to your home directory, asking for permission before clobbering anything.)
 4. `vim` (or in Windows: `gvim`)
-5. `:NeoBundleClean` (if you have previously used this Neo Vim config)
-6. `:NeoBundleInstall` (This will clone and install all of the plugins from github.)
-7. `brew install ack ag` (This will install ack and ag for the Ag and Ack vim plugin to work)
+5. `call dein#install()` (This will install all of the vim plugins from github.)
+6. `brew install rg` (This installs rg for the Ack vim plugin to work)
 
 ## Customizing
 
 Customizations can be added to the folder `.vim/custom_preconfig/` or `.vim/custom_config/`
 
 * Any files with a `.vim` extension in that folder will be loaded when running all versions of `vim`.
-* Any files with a `.gvim` extension in that folder will be loaded when running a graphical version of `vim`.
 
 The custom_preconfig settings are loaded prior to the common config. A common usecase for this is to reset mapleader.  Most of the rest of the customizations are placed in custom_config.
 
@@ -94,6 +93,7 @@ Common practice is to symlink a folder containing your custom configuration file
 
 * `<leader>pc` - Convert JS in the clipboard to Coffee and paste
 
+
 #### Prettify JS
 
 * `<leader>fj` - Formats and prettifies JS in the currently open file
@@ -147,14 +147,6 @@ Syntastic is a syntax checking plugin that runs buffers through external syntax
 checkers as they are saved and opened. If syntax errors are detected, the user
 is notified and is happy because they didn't have to compile their code or
 execute their script to find them.
-
-## Gundo
-
-Awesome visual representation of `vim` undo tree.
-
-**Customizations**
-
-* `<leader>h` - Toggle gundo
 
 ## T-Comment
 
@@ -329,55 +321,9 @@ There's a lot more; check it out at `:help surround`
 In insert mode, start typing something and hit `<TAB>` to tab-complete
 based on the current context.
 
-## Tagbar
+## BufOnly.vim
 
-Plugin for browsing the tags of source code files. It provides a
-sidebar that displays the ctags-generated tags of the current file, ordered by
-their scope. This means that for example methods in C++ are displayed under
-the class they are defined in.
-
-**Customizations**: Binds `<leader>rt` to the ctags command to
-update tags. Bind `<leader>.` to toggle the taglist window
-
-**Note**: For full language support, run `brew install ctags` to install
-exuberant-ctags. Also if using OSX you may need to rename the system installed
-ctags version so that vim correctly finds the exuberant ctags version instead,
-`sudo mv /usr/bin/ctags /usr/bin/ctags_orig`. In addition, TagBar supports
-doctorjs/jsctags if installed for awesome tag support for javascript.
-
-
-**Tip**: Check out `:help ctags` for information about VIM's built-in
-ctag support. Tag navigation creates a stack which can traversed via
-`<C-]>` (to find the source of a token) and `<C-T>` (to jump back up
-one level).
-
-## Matchit / ruby-matchit
-
-Improves `vim` ability to jump back and forth between matching pairs of
-opening and ending items with `%`.
-
-
-## Gist-vim
-
-Nice [gist integration](https://github.com/mattn/gist-vim) by mattn.
-Requires exporting your `GITHUB_TOKEN` and `GITHUB_USER` as environment
-variables or setup your [GitHub token config](http://help.github.com/git-email-settings/).
-
-Try `:Gist`, `:Gist -p` and visual blocks.
-
-## ZoomWin
-
-When working with split windows, ZoomWin lets you zoom into a window and
-out again using `<C-W> o`
-
-**Customizations**: Binds `<leader>z` to `:ZoomWin`
-
-## Markdown Preview
-
-Markdown preview takes the current buffer, converts the Markdown to
-HTML, and opens it in your default browser.
-
-**Customizations**: Binds `<leader>mp` to this plugin.
+Delete all the buffers except the current/named buffer
 
 ## Other goodies
 
@@ -396,8 +342,6 @@ Ships with a few additional syntaxes:
 * SCSS (bound to \*.scss)
 * An improved JavaScript syntax (bound to \*.js)
 * Coffee Script
-* Erlang
-* Jade
 
 ## Color schemes
 
@@ -429,13 +373,6 @@ This search functionality might not work until you install Ack or Ag. You can in
 ## Powerline Fonts
 
 If you would like to use powerline fonts for vim and you use iTerm, make sure to set your Non ASCII Font in the iTerm settings.
-
-## JS2Coffee
-
-Assuming that you have installed js2coffe in your machine, you can use the function PasteAsCoffee to convert your pbcopy contents
-contents and paste them into the opened buffer as coffescript (assuming it is valid js)
-
-There is a shortcut available for the function:
 
 ```code
 <leader>pc

@@ -104,11 +104,6 @@
 " JSON is JS
   au BufNewFile,BufRead *.json set ai filetype=javascript
 
-" different color for each paren pairs
-let vimclojure#ParenRainbow  = 1
-
-" set clipboard=unnamed
-
 " keep track of the status bar highlight mode (optimization)
 let g:bar_mode = 0
 
@@ -138,12 +133,8 @@ augroup hi_statusline
   autocmd InsertLeave,CursorMoved,BufReadPost,BufWritePost * call ColorizeStatusLine()
 augroup END
 
-
 " hamlc files are haml filetype
 autocmd BufNewFile,BufRead *.hamlc set filetype=haml
-
-" use normal arrow
-let g:NERDTreeDirArrows=0
 
 autocmd FileType sass,scss,stylus syn cluster sassCssAttributes add=@cssColors
 

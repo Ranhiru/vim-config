@@ -1,5 +1,5 @@
 set encoding=utf-8
-set rtp+=~/.vim/bundle/neobundle.vim/
+set rtp+=~/.vim/bundle/dein.vim/
 
 runtime! custom_preconfig/*.vim
 runtime! common_config/*.vim
