@@ -1,174 +1,144 @@
-" Plugins are managed by NeoBundle. Once VIM is open run :NeoBundleInstall to
+" Plugins are managed by Dein. Once VIM is open run :call dein#install() to
 " install plugins.
- call neobundle#begin(expand('~/.vim/bundle/'))
+"
+ call dein#begin(expand("~/.vim/bundle/"))
 
- " Let NeoBundle manage NeoBundle
- NeoBundleFetch 'Shougo/neobundle.vim'
-
-" Open jasmine rice from Vim
-  NeoBundle "dominicwong617/vim-open-jasmine-rice.git"
-
-" SplitJoin
-  NeoBundle "AndrewRadev/splitjoin.vim.git"
+ call dein#add("Shougo/dein.vim")
 
 " Plugins requiring no additional configuration or keymaps
-  NeoBundle "michaeljsmith/vim-indent-object.git"
-  NeoBundle "pangloss/vim-javascript.git"
-  NeoBundle "tomtom/tcomment_vim.git"
-  NeoBundle "tpope/vim-endwise.git"
-  NeoBundle "tpope/vim-fugitive.git"
-  NeoBundle "tpope/vim-haml.git"
-  NeoBundle "tpope/vim-rake.git"
-  NeoBundle "tpope/vim-repeat.git"
-  NeoBundle "vim-ruby/vim-ruby.git"
-  NeoBundle "vim-scripts/L9.git"
-  NeoBundle "vim-scripts/matchit.zip"
-  NeoBundle "vim-scripts/ruby-matchit.git"
-  NeoBundle "skammer/vim-css-color"
-  NeoBundle "rpbaltazar/vim-lodash-highlight.git"
+ call dein#add("michaeljsmith/vim-indent-object")
+ call dein#add("pangloss/vim-javascript")
+ call dein#add("tomtom/tcomment_vim")
+ call dein#add("tpope/vim-endwise")
+ call dein#add("tpope/vim-fugitive")
+ call dein#add("tpope/vim-haml")
+ call dein#add("tpope/vim-rake")
+ call dein#add("tpope/vim-repeat")
+ call dein#add("vim-ruby/vim-ruby")
+ call dein#add("vim-scripts/L9")
+ call dein#add("vim-scripts/matchit.zip")
+ call dein#add("vim-scripts/ruby-matchit")
+ call dein#add("skammer/vim-css-color")
+ call dein#add("rpbaltazar/vim-lodash-highlight")
+ call dein#add("AndrewRadev/splitjoin.vim")
+ call dein#add("dominicwong617/vim-open-jasmine-rice")
+ call dein#add("junegunn/vim-easy-align")
+ call dein#add("Lokaltog/vim-easymotion")
+ call dein#add("terryma/vim-multiple-cursors")
+ call dein#add("Yggdroot/indentLine")
+ call dein#add("nathanaelkane/vim-indent-guides")
+ call dein#add("airblade/vim-gitgutter")
+ call dein#add("Shougo/neocomplete")
+ call dein#add("Shougo/neosnippet")
+ call dein#add("Shougo/neosnippet-snippets")
+ call dein#add("w0rp/ale")
 
-  NeoBundle 'junegunn/vim-easy-align'
+ "Supertab code completion"
+ call dein#add("ervandew/supertab")
+   let g:SuperTabContextDefaultCompletionType = "<c-n>"
 
-  " Easy motion config
-    NeoBundle "Lokaltog/vim-easymotion.git"
+ "CtrlP
+ call dein#add("kien/ctrlp.vim")
+   nnoremap <Leader>b :<C-U>CtrlPBuffer<CR>
+   nnoremap <C-p> :<C-U>CtrlP<CR>
+   nnoremap <Leader>t :<C-U>CtrlP<CR>
+   nnoremap <Leader>T :<C-U>CtrlPTag<CR>
 
-  "Supertab code completion"
-    NeoBundle "ervandew/supertab.git"
-    let g:SuperTabContextDefaultCompletionType = "<c-n>"
+   " respect the .gitignore
+   let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others']
 
-  " CtrlP
-    NeoBundle "kien/ctrlp.vim.git"
-      nnoremap <Leader>b :<C-U>CtrlPBuffer<CR>
-      nnoremap <C-p> :<C-U>CtrlP<CR>
-      nnoremap <Leader>t :<C-U>CtrlP<CR>
-      nnoremap <Leader>T :<C-U>CtrlPTag<CR>
+ "Coffee script
+ call dein#add("kchmck/vim-coffee-script")
+   au BufNewFile,BufRead *.coffee set filetype=coffee
 
-      " respect the .gitignore
-      let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others']
+ "Ack
+ call dein#add("mileszs/ack.vim")
+   let g:ackprg = "rg --vimgrep --smart-case"
+   cnoreabbrev ag Ack!
+   cnoreabbrev aG Ack!
+   cnoreabbrev Ag Ack!
+   cnoreabbrev AG Ack!
 
-  " Go
-    NeoBundle "jnwhiteh/vim-golang.git"
-      au BufNewFile,BufRead *.go set filetype=go
+   nmap g* :Ack! <C-R><C-W><space>
 
-  " Slim
-    NeoBundle "slim-template/vim-slim.git"
-      au BufNewFile,BufRead *.slim set filetype=slim
+ "Tagbar for navigation by tags using CTags
+ call dein#add("majutsushi/tagbar")
+   let g:tagbar_autofocus = 1
+   map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
+   map <Leader>. :TagbarToggle<CR>
 
-  " Less
-    NeoBundle "groenewege/vim-less.git"
-      au BufNewFile,BufRead *.less set filetype=less
+ "Markdown syntax highlighting
+ call dein#add("tpope/vim-markdown")
+   augroup mkd
+     autocmd BufNewFile,BufRead *.mkd      set ai formatoptions=tcroqn2 comments=n:> filetype=markdown
+     autocmd BufNewFile,BufRead *.md       set ai formatoptions=tcroqn2 comments=n:> filetype=markdown
+     autocmd BufNewFile,BufRead *.markdown set ai formatoptions=tcroqn2 comments=n:> filetype=markdown
+   augroup END
 
-  " Handlebars, Mustache, and Friends
-    NeoBundle "mustache/vim-mustache-handlebars.git"
-    au  BufNewFile,BufRead *.mustache,*.handlebars,*.hbs,*.hogan,*.hulk,*.hjs set filetype=html syntax=mustache | runtime! ftplugin/mustache.vim ftplugin/mustache*.vim ftplugin/mustache/*.vim
+ "NERDTree for project drawer
+ call dein#add("scrooloose/nerdtree")
+   let NERDTreeHijackNetrw = 0
+   nmap <leader>g :NERDTreeToggle<CR>
+   nmap <leader>G :NERDTreeFind<CR>
+   let g:NERDTreeDirArrows=1
 
-  " Stylus
-    NeoBundle "wavded/vim-stylus.git"
-      au BufNewFile,BufRead *.styl set filetype=stylus
+ "Tabular for aligning text
+ call dein#add("godlygeek/tabular")
+   function! CustomTabularPatterns()
+     if exists('g:tabular_loaded')
+       AddTabularPattern! symbols         / :/l0
+       AddTabularPattern! hash            /^[^>]*\zs=>/
+       AddTabularPattern! chunks          / \S\+/l0
+       AddTabularPattern! assignment      / = /l0
+       AddTabularPattern! comma           /^[^,]*,/l1
+       AddTabularPattern! colon           /:\zs /l0
+       AddTabularPattern! options_hashes  /:\w\+ =>/
+     endif
+   endfunction
 
-  " Coffee script
-    NeoBundle "kchmck/vim-coffee-script.git"
-      au BufNewFile,BufRead *.coffee set filetype=coffee
+   autocmd VimEnter * call CustomTabularPatterns()
 
-    NeoBundle 'mileszs/ack.vim'
-      let g:ackprg = 'rg --vimgrep --smart-case'
-      cnoreabbrev ag Ack!
-      cnoreabbrev aG Ack!
-      cnoreabbrev Ag Ack!
-      cnoreabbrev AG Ack!
+   " shortcut to align text with Tabular
+   map <Leader>a :Tabularize<space>
 
-      nmap g* :Ack! <C-R><C-W><space>
+ "Unimpaired for keymaps for quicky manipulating lines and files
+ call dein#add("tpope/vim-unimpaired")
+   " Bubble single lines
+   nmap <C-Up> [e
+   nmap <C-Down> ]e
 
-  " Vim Multiple Cursors
-    NeoBundle 'terryma/vim-multiple-cursors.git'
+   " Bubble multiple lines
+   vmap <C-Up> [egv
+   vmap <C-Down> ]egv
+   vmap <C-k> [egv
+   vmap <C-j> ]egv
 
-  " Tagbar for navigation by tags using CTags
-    NeoBundle "majutsushi/tagbar.git"
-      let g:tagbar_autofocus = 1
-      map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
-      map <Leader>. :TagbarToggle<CR>
+ "rails.vim, nuff' said
+ call dein#add("tpope/vim-rails")
+   map <Leader>oc :Rcontroller<Space>
+   map <Leader>ov :Rview<Space>
+   map <Leader>om :Rmodel<Space>
+   map <Leader>oh :Rhelper<Space>
+   map <Leader>oj :Rjavascript<Space>
+   map <Leader>os :Rstylesheet<Space>
+   map <Leader>oi :Rintegration<Space>
 
-  " Markdown syntax highlighting
-    NeoBundle "tpope/vim-markdown.git"
-      augroup mkd
-        autocmd BufNewFile,BufRead *.mkd      set ai formatoptions=tcroqn2 comments=n:> filetype=markdown
-        autocmd BufNewFile,BufRead *.md       set ai formatoptions=tcroqn2 comments=n:> filetype=markdown
-        autocmd BufNewFile,BufRead *.markdown set ai formatoptions=tcroqn2 comments=n:> filetype=markdown
-      augroup END
+   let g:rails_projections = {
+     \ "app/assets/javascripts/*.js.coffee": { "alternate": "spec/javascripts/%s_spec.js.coffee" },
+     \ "spec/javascripts/*_spec.js.coffee": { "alternate": "app/assets/javascripts/%s.js.coffee" } }
 
-  " NERDTree for project drawer
-    NeoBundle "scrooloose/nerdtree.git"
-      let NERDTreeHijackNetrw = 0
-      nmap <leader>g :NERDTreeToggle<CR>
-      nmap <leader>G :NERDTreeFind<CR>
-      let g:NERDTreeDirArrows=1
+  "surround for adding surround 'physics'
+  call dein#add("tpope/vim-surround")
+    " # to surround with ruby string interpolation
+    let g:surround_35 = "#{\r}"
+    " - to surround with no-output erb tag
+    let g:surround_45 = "<% \r %>"
+    " = to surround with output erb tag
+    let g:surround_61 = "<%= \r %>"
 
-  " Tabular for aligning text
-    NeoBundle "godlygeek/tabular.git"
-      function! CustomTabularPatterns()
-        if exists('g:tabular_loaded')
-          AddTabularPattern! symbols         / :/l0
-          AddTabularPattern! hash            /^[^>]*\zs=>/
-          AddTabularPattern! chunks          / \S\+/l0
-          AddTabularPattern! assignment      / = /l0
-          AddTabularPattern! comma           /^[^,]*,/l1
-          AddTabularPattern! colon           /:\zs /l0
-          AddTabularPattern! options_hashes  /:\w\+ =>/
-        endif
-      endfunction
-
-      autocmd VimEnter * call CustomTabularPatterns()
-
-      " shortcut to align text with Tabular
-      map <Leader>a :Tabularize<space>
-
-  " Unimpaired for keymaps for quicky manipulating lines and files
-    NeoBundle "tpope/vim-unimpaired.git"
-      " Bubble single lines
-      nmap <C-Up> [e
-      nmap <C-Down> ]e
-
-      " Bubble multiple lines
-      vmap <C-Up> [egv
-      vmap <C-Down> ]egv
-      vmap <C-k> [egv
-      vmap <C-j> ]egv
-
-  " Syntastic for catching syntax errors on save
-    NeoBundle "scrooloose/syntastic.git"
-      let g:syntastic_enable_signs=1
-      let g:syntastic_quiet_messages = {'level': 'warning'}
-      " syntastic is too slow for haml and sass
-      let g:syntastic_mode_map = { 'mode': 'active',
-                                 \ 'active_filetypes': [],
-                                 \ 'passive_filetypes': ['haml','scss','sass'] }
-
-  " rails.vim, nuff' said
-    NeoBundle "tpope/vim-rails.git"
-      map <Leader>oc :Rcontroller<Space>
-      map <Leader>ov :Rview<Space>
-      map <Leader>om :Rmodel<Space>
-      map <Leader>oh :Rhelper<Space>
-      map <Leader>oj :Rjavascript<Space>
-      map <Leader>os :Rstylesheet<Space>
-      map <Leader>oi :Rintegration<Space>
-
-      let g:rails_projections = {
-        \ "app/assets/javascripts/*.js.coffee": { "alternate": "spec/javascripts/%s_spec.js.coffee" },
-        \ "spec/javascripts/*_spec.js.coffee": { "alternate": "app/assets/javascripts/%s.js.coffee" } }
-
-  " surround for adding surround 'physics'
-    NeoBundle "tpope/vim-surround.git"
-      " # to surround with ruby string interpolation
-      let g:surround_35 = "#{\r}"
-      " - to surround with no-output erb tag
-      let g:surround_45 = "<% \r %>"
-      " = to surround with output erb tag
-      let g:surround_61 = "<%= \r %>"
-
-  " Easy async RSpec running
-    NeoBundle 'thoughtbot/vim-rspec'
-    NeoBundle 'tpope/vim-dispatch'
+  "Easy async RSpec running
+  call dein#add("thoughtbot/vim-rspec")
+  call dein#add("tpope/vim-dispatch")
     let g:rspec_runner = "os_x_iterm2"
     let g:rspec_command = "rspec --format=progress --no-profile {spec}"
     nmap <Leader>rc :wa<CR> :call RunCurrentSpecFile()<CR>
@@ -176,21 +146,17 @@
     nmap <Leader>rl :wa<CR> :call RunLastSpec()<CR>
     nmap <Leader>ra :wa<CR> :call RunAllSpecs()<CR>
 
-    NeoBundle "Yggdroot/indentLine"
-    NeoBundle "nathanaelkane/vim-indent-guides.git"
-    NeoBundle "airblade/vim-gitgutter"
-
-    NeoBundle 'Shougo/neocomplete'
-    NeoBundle 'Shougo/neosnippet'
-    NeoBundle 'Shougo/neosnippet-snippets'
-
   " Easy formatting of JavaScript or JSON files
-    NeoBundle "maksimr/vim-jsbeautify"
-    NeoBundle "einars/js-beautify"
+    call dein#add("maksimr/vim-jsbeautify")
+    call dein#add("einars/js-beautify")
     nmap <Leader>fj :call JsBeautify()<cr>
 
-    NeoBundle "grepplace.vim"
+    call dein#add("vim-scripts/greplace.vim")
     set grepprg=ag
     let g:grep_cmd_opts = '--line-numbers --noheading'
 
- call neobundle#end()
+call dein#end()
+call dein#save_state()
+
+filetype plugin indent on
+syntax enable

@@ -1,5 +1,6 @@
 set encoding=utf-8
-set rtp+=~/.vim/bundle/neobundle.vim/
+
+set rtp+=~/.vim/bundle/repos/github.com/Shougo/dein.vim
 
 runtime! custom_preconfig/*.vim
 runtime! common_config/*.vim
@@ -17,3 +18,7 @@ autocmd FileType css,scss,coffee set iskeyword=@,48-57,_,-,?,!,192-255
 :au FocusLost * silent! wa
 
 colorscheme Tomorrow-Night-Eighties
+
+if &compatible
+  set nocompatible
+endif
