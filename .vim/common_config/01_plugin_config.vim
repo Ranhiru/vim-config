@@ -32,6 +32,7 @@
  call dein#add("Shougo/neosnippet")
  call dein#add("Shougo/neosnippet-snippets")
  call dein#add("w0rp/ale")
+ call dein#add("itchyny/lightline.vim")
 
  "Supertab code completion"
  call dein#add("ervandew/supertab")
@@ -124,8 +125,8 @@
    map <Leader>oi :Rintegration<Space>
 
    let g:rails_projections = {
-     \ "app/assets/javascripts/*.js.coffee": { "alternate": "spec/javascripts/%s_spec.js.coffee" },
-     \ "spec/javascripts/*_spec.js.coffee": { "alternate": "app/assets/javascripts/%s.js.coffee" } }
+     \ "app/assets/javascripts/*.js.coffee": { "alternate": "spec/javascripts/{}_spec.js.coffee" },
+     \ "spec/javascripts/*_spec.js.coffee":  { "alternate": "app/assets/javascripts/{}.js.coffee" }}
 
   "surround for adding surround 'physics'
   call dein#add("tpope/vim-surround")

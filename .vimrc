@@ -22,3 +22,5 @@ colorscheme Tomorrow-Night-Eighties
 if &compatible
   set nocompatible
 endif
+
+set noshowmode
