@@ -33,6 +33,11 @@
  call dein#add("Shougo/neosnippet-snippets")
  call dein#add("w0rp/ale")
  call dein#add("itchyny/lightline.vim")
+ call dein#add("leafgarland/typescript-vim")
+
+ "Undo Quit
+ call dein#add("AndrewRadev/undoquit.vim")
+ map <D-T> <Esc>:Undoquit<CR>
 
  "Supertab code completion"
  call dein#add("ervandew/supertab")
