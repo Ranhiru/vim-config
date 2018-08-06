@@ -14,7 +14,6 @@
  call dein#add("tpope/vim-haml")
  call dein#add("tpope/vim-rake")
  call dein#add("tpope/vim-repeat")
- call dein#add("vim-ruby/vim-ruby")
  call dein#add("vim-scripts/L9")
  call dein#add("vim-scripts/matchit.zip")
  call dein#add("vim-scripts/ruby-matchit")
