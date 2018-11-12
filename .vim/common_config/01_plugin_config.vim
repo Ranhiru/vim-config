@@ -49,8 +49,11 @@
    nnoremap <Leader>t :<C-U>CtrlP<CR>
    nnoremap <Leader>T :<C-U>CtrlPTag<CR>
 
-   " respect the .gitignore
-   let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others']
+   let g:ctrlp_user_command = 'fd --type f --color=never "" %s'
+
+ call dein#add("nixprime/cpsm")
+ let g:ctrlp_match_func = {'match': 'cpsm#CtrlPMatch'}
+ let g:ctrlp_use_caching = 0
 
  "Coffee script
  call dein#add("kchmck/vim-coffee-script")
