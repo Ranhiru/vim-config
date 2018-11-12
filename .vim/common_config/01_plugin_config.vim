@@ -85,10 +85,10 @@
 
  "NERDTree for project drawer
  call dein#add("scrooloose/nerdtree")
-   let NERDTreeHijackNetrw = 0
    nmap <leader>g :NERDTreeToggle<CR>
    nmap <leader>G :NERDTreeFind<CR>
    let g:NERDTreeDirArrows=1
+   let g:NERDTreeHijackNetrw =1
 
  "Tabular for aligning text
  call dein#add("godlygeek/tabular")
