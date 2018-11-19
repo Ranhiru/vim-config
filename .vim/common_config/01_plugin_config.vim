@@ -43,7 +43,7 @@
    let g:SuperTabContextDefaultCompletionType = "<c-n>"
 
  "CtrlP
- call dein#add("kien/ctrlp.vim")
+ call dein#add("ctrlpvim/ctrlp.vim")
    nnoremap <Leader>b :<C-U>CtrlPBuffer<CR>
    nnoremap <C-p> :<C-U>CtrlP<CR>
    nnoremap <Leader>t :<C-U>CtrlP<CR>
