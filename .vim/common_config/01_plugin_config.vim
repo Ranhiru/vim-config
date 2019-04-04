@@ -33,6 +33,7 @@
  call dein#add("w0rp/ale")
  call dein#add("itchyny/lightline.vim")
  call dein#add("leafgarland/typescript-vim")
+ call dein#add("eugen0329/vim-esearch")
 
  "Undo Quit
  call dein#add("AndrewRadev/undoquit.vim")
@@ -159,7 +160,7 @@
     call dein#add("einars/js-beautify")
     nmap <Leader>fj :call JsBeautify()<cr>
 
-    call dein#add("vim-scripts/greplace.vim")
+    call dein#add("yegappan/greplace")
     set grepprg=rg
     let g:grep_cmd_opts = '--line-numbers --noheading'
 
