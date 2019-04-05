@@ -31,6 +31,8 @@
 
 runtime! custom_config/*.gvim
 
+set guifont=Monaco:h17
+
 if filereadable(glob("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
