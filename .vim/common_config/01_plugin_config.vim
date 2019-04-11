@@ -34,6 +34,8 @@
  call dein#add("itchyny/lightline.vim")
  call dein#add("leafgarland/typescript-vim")
  call dein#add("eugen0329/vim-esearch")
+ call dein#add('pangloss/vim-javascript')
+ call dein#add('mxw/vim-jsx')
 
  "Undo Quit
  call dein#add("AndrewRadev/undoquit.vim")
@@ -55,6 +57,13 @@
  call dein#add("nixprime/cpsm")
  let g:ctrlp_match_func = {'match': 'cpsm#CtrlPMatch'}
  let g:ctrlp_use_caching = 0
+
+ call dein#add('mattn/emmet-vim')
+ let g:user_emmet_settings = {
+    \  'javascript.jsx' : {
+    \      'extends' : 'jsx',
+    \  },
+  \}
 
  "Coffee script
  call dein#add("kchmck/vim-coffee-script")
