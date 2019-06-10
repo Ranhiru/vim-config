@@ -168,7 +168,7 @@
   call dein#add("thoughtbot/vim-rspec")
   call dein#add("tpope/vim-dispatch")
     let g:rspec_runner = "os_x_iterm2"
-    let g:rspec_command = "rspec --format=progress --no-profile {spec}"
+    let g:rspec_command = "bundle exec rspec {spec}"
     nmap <Leader>rc :wa<CR> :call RunCurrentSpecFile()<CR>
     nmap <Leader>rn :wa<CR> :call RunNearestSpec()<CR>
     nmap <Leader>rl :wa<CR> :call RunLastSpec()<CR>
