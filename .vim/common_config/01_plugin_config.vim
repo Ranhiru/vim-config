@@ -106,6 +106,7 @@
  call dein#add("scrooloose/nerdtree")
    nmap <leader>g :NERDTreeToggle<CR>
    nmap <leader>G :NERDTreeFind<CR>
+   nmap <leader>nn :NERDTree<CR>
    let g:NERDTreeDirArrows=1
    let g:NERDTreeHijackNetrw =1
 
