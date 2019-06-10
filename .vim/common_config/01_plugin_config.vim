@@ -65,10 +65,7 @@
    nnoremap <Leader>T :<C-U>CtrlPTag<CR>
 
    let g:ctrlp_user_command = 'fd --type f --color=never "" %s'
-
- call dein#add("nixprime/cpsm")
- let g:ctrlp_match_func = {'match': 'cpsm#CtrlPMatch'}
- let g:ctrlp_use_caching = 0
+   let g:ctrlp_use_caching = 0
 
  call dein#add('mattn/emmet-vim')
  let g:user_emmet_settings = {
