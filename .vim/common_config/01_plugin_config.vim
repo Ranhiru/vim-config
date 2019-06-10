@@ -33,6 +33,9 @@
  call dein#add("eugen0329/vim-esearch")
  call dein#add('pangloss/vim-javascript')
  call dein#add('mxw/vim-jsx')
+ call dein#add('posva/vim-vue')
+ call dein#add('chrisbra/Colorizer')
+ call dein#add('roman/golden-ratio')
 
  "Undo Quit
  call dein#add("AndrewRadev/undoquit.vim")
