@@ -39,7 +39,7 @@
 
  " Snippets Related
  call dein#add('ervandew/supertab')
- call dein#add("Valloric/YouCompleteMe")
+ call dein#add('neoclide/coc.nvim', {'merged':0, 'rev': 'release'})
  call dein#add("SirVer/ultisnips")
  call dein#add("honza/vim-snippets")
 
@@ -103,7 +103,7 @@
    augroup END
 
  "NERDTree for project drawer
- call dein#add("scrooloose/nerdtree")
+ call dein#add("preservim/nerdtree")
    nmap <leader>g :NERDTreeToggle<CR>
    nmap <leader>G :NERDTreeFind<CR>
    nmap <leader>nn :NERDTree<CR>
