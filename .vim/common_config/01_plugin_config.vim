@@ -36,6 +36,7 @@
  call dein#add('posva/vim-vue')
  call dein#add('chrisbra/Colorizer')
  call dein#add('roman/golden-ratio')
+ call dein#add('udalov/kotlin-vim')
 
  " Snippets Related
  call dein#add('ervandew/supertab')
