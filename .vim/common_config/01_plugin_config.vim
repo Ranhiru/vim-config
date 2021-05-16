@@ -20,10 +20,9 @@
  call dein#add("skammer/vim-css-color")
  call dein#add("rpbaltazar/vim-lodash-highlight")
  call dein#add("AndrewRadev/splitjoin.vim")
- call dein#add("dominicwong617/vim-open-jasmine-rice")
  call dein#add("junegunn/vim-easy-align")
  call dein#add("Lokaltog/vim-easymotion")
- call dein#add("terryma/vim-multiple-cursors")
+ call dein#add("mg979/vim-visual-multi")
  call dein#add("Yggdroot/indentLine")
  call dein#add("nathanaelkane/vim-indent-guides")
  call dein#add("airblade/vim-gitgutter")
@@ -175,9 +174,9 @@
     nmap <Leader>rl :wa<CR> :call RunLastSpec()<CR>
     nmap <Leader>ra :wa<CR> :call RunAllSpecs()<CR>
 
-  " Easy formatting of JavaScript or JSON files
+  "Easy formatting of JavaScript or JSON files
     call dein#add("maksimr/vim-jsbeautify")
-    call dein#add("einars/js-beautify")
+    call dein#add("beautify-web/js-beautify")
     nmap <Leader>fj :call JsBeautify()<cr>
 
     call dein#add("yegappan/greplace")
