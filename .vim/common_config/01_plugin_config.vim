@@ -30,7 +30,6 @@
  call dein#add("itchyny/lightline.vim")
  call dein#add("leafgarland/typescript-vim")
  call dein#add("eugen0329/vim-esearch")
- call dein#add('pangloss/vim-javascript')
  call dein#add('mxw/vim-jsx')
  call dein#add('posva/vim-vue')
  call dein#add('chrisbra/Colorizer')
