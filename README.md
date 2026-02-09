@@ -10,25 +10,14 @@ This config is built primarily to work on top of the OSX version of `MacVim`, bu
 This vim configuration requires the Meslo font from
 [https://github.com/Lokaltog/powerline-fonts](https://github.com/Lokaltog/powerline-fonts)
 
-## Attention Windows Users!
-
-If you are installing this config on Microsoft Windows, you must download and install the latest [RailsInstaller](http://www.railsinstaller.org/) package.  Go ahead and do it now.  I'll wait.
-
-Install the latest version of [Vim](http://www.vim.org/download.php#pc) and install with default options + checking the "Create .bat files for command line use".
-
-The Windows version of the Vim configuration uses rake (for installation) git (for Vim plugin installations), and requires several other packages to emulate Ack (for file searching) and Curl (for gists) under Windows.  RailsInstaller is a single package that installs everything we will need to get things working.
-
 ## Install
-
-Windows users: be sure to use **RailsInstaller** > **Command Prompt with Ruby and Rails** to perform these installation steps instead of the normal command prompt.
 
 1. `git clone git@github.com:ranhiru/vim-config.git`
 2. `cd vim-config`
-3. `rake` (This will symlink the necessary files to your home directory, asking for permission before clobbering anything.)
-4. `vim` (or in Windows: `gvim`)
-5. `:NeoBundleClean` (if you have previously used this Neo Vim config)
-6. `:NeoBundleInstall` (This will clone and install all of the plugins from github.)
-7. `brew install ack ag` (This will install ack and ag for the Ag and Ack vim plugin to work)
+3. `./install.sh` (This will symlink the necessary files to your home directory, asking for permission before clobbering anything.)
+4. `vim`
+5. `:call dein#install()` (This will install all plugins.)
+6. `brew install ack ag` (This will install ack and ag for the Ag and Ack vim plugin to work)
 
 ## Customizing
 
@@ -39,8 +28,8 @@ Customizations can be added to the folder `.vim/custom_preconfig/` or `.vim/cust
 
 The custom_preconfig settings are loaded prior to the common config. A common usecase for this is to reset mapleader.  Most of the rest of the customizations are placed in custom_config.
 
-You can add custom plugins by registering them in a `.vim` file in the custom_config folder with the same `NeoBundle "plugin-repo-url"`
-syntax used in the `.vim/common_config/plugin_config.vim`, and then performing steps 3 & 4 from the install steps above.
+You can add custom plugins by registering them in a `.vim` file in the custom_config folder with `call dein#add('plugin-repo-url')`
+syntax used in the `.vim/common_config/01_plugin_config.vim`, and then running `:call dein#install()` in vim.
 
 Common practice is to symlink a folder containing your custom configuration files as the `.vim/custom_config` folder.
 
